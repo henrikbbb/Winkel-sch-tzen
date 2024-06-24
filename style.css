@@ -1,0 +1,27 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    font-size: 20px;
+    height: 50px;
+    display: block;
+}
+
+.answers {
+    max-width: 500px;
+}
+
+.answer {
+    min-width: 100%;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
