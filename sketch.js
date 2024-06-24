@@ -10,13 +10,10 @@ function setup() {
 	createCanvas(500, 500)
 	angleMode(DEGREES)
 	
-	
 	containerAnswers = createDiv()
 
 	newAngle()
-
 	windowResized()
-
 }
 
 function newAngle() {
@@ -36,10 +33,9 @@ function setupAngle() {
 }
 
 function drawAngle() {
-	background(255)
-
 	let radius = width * radius_factor
 	
+	background(255)
 	fill(225)
 	strokeWeight(2)
 	stroke(0)
@@ -67,13 +63,13 @@ function createAnswers() {
 	answers.sort(function(a, b) {return a - b})
 
 	let buttons = []
-
 	containerAnswers.addClass('answers')
 	for (let i = 0; i < 4; i++) {
 		let answer = answers[i]
 		let button = createButton(answer + '°')
 		buttons.push(button)
 		button.addClass('answer')
+		button.addClass('button')
 		button.parent(containerAnswers)
 		button.mousePressed(() => {
 			let correct = answer == angle
@@ -82,6 +78,7 @@ function createAnswers() {
 			}
 			for (let j = 0; j < 4; j++) {
 				let button = buttons[j]
+				button.mousePressed(() => {})
 				let answer = answers[j]
 				if (answer == angle) {
 					button.addClass('green')
